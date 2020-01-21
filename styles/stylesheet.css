@@ -485,6 +485,7 @@ code {
     font-size: 2rem;
     opacity: 70%;
     text-transform: capitalize;
+    font-family: "IBM Plex Mono", Helvetica, sans-serif;
 }
 
 .hero-text {
@@ -544,8 +545,8 @@ code {
 
 .about .links {
     flex: 1 1 40%;
-    text-align: left;
-    padding-left: 5rem;
+    text-align: right;
+    margin-left: auto;
     text-decoration: none;
 }
 
@@ -570,7 +571,7 @@ code {
     line-height: 1.9rem;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
     .about{
         flex-direction:column;
         padding: 1rem;
@@ -598,7 +599,7 @@ grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 8rem;
-padding: 5rem;
+/*padding: 5rem;*/
     
 color: white;
     
@@ -686,7 +687,7 @@ color: white;
     transition: opacity .25s;
 }
 
-@media only screen and (min-device-width : 480px) and (max-device-width : 700px) {
+@media only screen and (min-width : 480px) and (max-width : 700px) {
     .work-grid{
         margin-top: 20vw;
         grid-template-columns: repeat(1, 1fr);
@@ -715,7 +716,7 @@ color: white;
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
     .work-grid{
         padding: 0rem;
         margin-top: 20vw;
@@ -765,12 +766,9 @@ color: white;
 
 .footer{
 /*  position: fixed;*/
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 15vw;
-  text-align: center;
-  margin-top: 15vw;
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+    text-align: center;
 }
 .hr{
     display: block;
