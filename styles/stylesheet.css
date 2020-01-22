@@ -112,7 +112,7 @@ h4 {
 
 p,
 a,
-ol{
+ol {
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 3.5rem;
@@ -154,6 +154,7 @@ a {
     text-decoration: underline;
     text-decoration-color: rgba(0, 0, 0, 1.0);
     text-decoration-skip: ink;
+    cursor: none;
 }
 
 
@@ -228,12 +229,13 @@ code {
 }
 
 @media (hover:hover) {
-  
-    #cursor, .zoom{
+
+    #cursor,
+    .zoom {
         display: block;
     }
 
-  
+
 }
 
 
@@ -259,6 +261,7 @@ code {
     justify-content: space-between;
     font-family: 'IBM Plex Mono', Helvetica, sans-serif;
     margin-top: 3.5rem;
+    z-index: 99;
 }
 
 .nav-logo {
@@ -266,11 +269,11 @@ code {
     color: white;
 }
 
-#luxy{
+#luxy {
     background-color: black;
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -278,37 +281,37 @@ code {
     text-decoration: none;
 }
 
-.nav-menu-item{
+.nav-menu-item {
     padding-left: 2.1875vw;
 }
 
 .nav-menu-item a {
     text-decoration: none;
     color: white;
-    transition: all .5s cubic-bezier(0,1.07,.89,.99);
+    transition: all .5s cubic-bezier(0, 1.07, .89, .99);
     outline: 0;
     border: none;
     font-family: 'IBM Plex Mono', Helvetica, sans-serif;
     background: none;
 }
 
-.nav-menu-item a:hover{
+.nav-menu-item a:hover {
 
     cursor: none;
 }
 
-.hover-effect li{
+.hover-effect li {
     overflow: hidden;
     height: auto;
-/*    padding: 0 4px;*/
+    /*    padding: 0 4px;*/
     margin-left: 2.1875vw;
 }
 
-.hover-effect li a{
+.hover-effect li a {
     position: relative;
     display: inline-block;
     line-height: 1.5rem;
-    transition: transform .5s cubic-bezier(0,1.07,.89,.99);
+    transition: transform .5s cubic-bezier(0, 1.07, .89, .99);
 }
 
 .hover-effect li a:before {
@@ -325,31 +328,33 @@ code {
 
 
 @media (min-width: 320px) and (max-width: 700px) {
-  
-    .nav-logo{
+
+    .nav-logo {
         font-size: 2rem;
     }
-    .nav-menu{
+
+    .nav-menu {
         display: none;
     }
-  
+
 }
 
 /* RESPONSIVE BURGER MENU */
-.burger_menu{
-  top: 5%;
-  right: 2%;
-  height: 27px;
-  width: 35px;
-  z-index: 100;
-  transition: opacity .25s ease;
-  background: none;
+.burger_menu {
+    top: 5%;
+    right: 2%;
+    height: 27px;
+    width: 35px;
+    z-index: 100;
+    transition: opacity .25s ease;
+    background: none;
 }
 
-.burger_menu:hover{
+.burger_menu:hover {
     opacity: 80%;
 }
-.burger_menu-top{
+
+.burger_menu-top {
     top: 0;
     width: 24px;
     height: 1px;
@@ -359,11 +364,11 @@ code {
     transition: transform .6s cubic-bezier(.165, .84, .44, 1);
 }
 
-.burger_menu.active .burger_menu-top{
+.burger_menu.active .burger_menu-top {
     transform: translateY(0px) translateX(-5px) rotate(45deg);
 }
 
-.burger_menu-bottom{
+.burger_menu-bottom {
     bottom: 0;
     width: 20px;
     height: 1px;
@@ -373,24 +378,24 @@ code {
     transition: transform .6s cubic-bezier(.165, .84, .44, 1);
 }
 
-.burger_menu.active .burger_menu-bottom{
+.burger_menu.active .burger_menu-bottom {
     width: 24px;
     transform: translateY(-5px) translateX(-5px) rotate(-45deg);
 }
 
-.darkmode{
+.darkmode {
     background-color: #000 !important;
 }
 
 @media (min-width: 700px) {
-  
-    .burger_menu{
+
+    .burger_menu {
         display: none;
     }
-  
+
 }
 
-.overlay{
+.overlay {
     position: fixed;
     background: #000;
     top: 0;
@@ -399,62 +404,70 @@ code {
     height: 0%;
     opacity: 0;
     visibility: hidden;
-    transition:opacity .35s, visibility .35s, height .35s;
+    transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
 }
+
 .overlay.open {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
 }
+
 .overlay.open li {
-  animation: slideTextUp .5s ease forwards;
-  animation-delay: .35s;
+    animation: slideTextUp .5s ease forwards;
+    animation-delay: .35s;
 }
+
 .overlay.open li:nth-of-type(2) {
-  animation-delay: .4s;
+    animation-delay: .4s;
 }
+
 .overlay.open li:nth-of-type(3) {
-  animation-delay: .45s;
+    animation-delay: .45s;
 }
+
 .overlay-menu {
-  position: relative;
-  height: 10%;
-  top: 40%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  text-align: center;
+    position: relative;
+    height: 10%;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    text-align: center;
 }
 
 .overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
 }
+
 .overlay ul li {
-  display: block;
-  min-height: 50px;
-  opacity: 0;
+    display: block;
+    min-height: 50px;
+    opacity: 0;
 }
+
 .overlay ul li a {
-  display: block;
-  position: relative;
-  color: #FFF;
-  text-decoration: none;
-  overflow: hidden;
+    display: block;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
 }
 
 @keyframes slideTextUp {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(100%);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(100%);
+    }
 }
 
 
@@ -465,10 +478,10 @@ code {
     min-height: 580px;
     align-items: center;
     color: white;
-    
+
 }
 
-.hero-wrapper{
+.hero-wrapper {
     align-items: flex-end;
     display: flex;
     height: 100vh;
@@ -481,7 +494,7 @@ code {
     height: auto;
 }
 
-.hero-name{
+.hero-name {
     font-size: 2rem;
     opacity: 70%;
     text-transform: capitalize;
@@ -503,24 +516,26 @@ code {
     position: absolute;
 }
 
-.hero-arrow{
+.hero-arrow {
     align-items: flex-end;
 }
 
-.hero-arrow-svg{
+.hero-arrow-svg {
     height: 8rem;
     fill: white;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .hero-arrow{
+    .hero-arrow {
         display: none;
     }
-    .hero-wrapper{
+
+    .hero-wrapper {
         align-items: center;
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 5rem;
         line-height: 6rem
     }
@@ -550,21 +565,21 @@ code {
     text-decoration: none;
 }
 
-.about .links-list{
+.about .links-list {
     list-style: none;
     font-size: 2rem;
 }
 
-.about .links-list ul{
+.about .links-list ul {
     margin-top: 10px;
     line-height: 2rem;
 }
 
-.about-paragraph{
+.about-paragraph {
     font-size: 1.9rem;
 }
 
-.about-secondary{
+.about-secondary {
     margin-top: 2vw;
     font-size: 1.3rem;
     color: grey;
@@ -572,16 +587,17 @@ code {
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
-    .about{
-        flex-direction:column;
+    .about {
+        flex-direction: column;
         padding: 1rem;
     }
-    .about .links{
+
+    .about .links {
         padding-left: 0px;
         text-align: right;
     }
-    
-    .about .links-list{
+
+    .about .links-list {
         list-style-type: none;
         display: flex;
         flex-direction: row;
@@ -594,18 +610,18 @@ code {
 /* WORK GALLERY*/
 
 .work-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 8rem;
-/*padding: 5rem;*/
-    
-color: white;
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 8rem;
+    /*padding: 5rem;*/
+
+    color: white;
+
 }
 
-.div1 { 
+.div1 {
     color: white;
     grid-area: 1 / 1 / 3 / 3;
     width: 80%;
@@ -615,17 +631,29 @@ color: white;
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
 }
+
+.div1:hover {
+    background-size: 73%;
+}
+
 .div2 {
     color: white;
     background: black;
-    grid-area: 1 / 3 / 1 / 6; 
+    grid-area: 1 / 3 / 1 / 6;
     height: 30rem;
     background-image: url(../media/balance.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: 102%;
     background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
 }
+
+.div2:hover {
+    background-size: 100%;
+}
+
 .div4 {
     color: white;
     grid-area: 2 / 1 / 2 / 3;
@@ -635,7 +663,13 @@ color: white;
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
 }
+
+.div4:hover {
+    background-size: 48%;
+}
+
 .div5 {
     color: white;
     grid-area: 2 / 3 / 2 / 5;
@@ -643,8 +677,14 @@ color: white;
     height: 15rem;
     width: 80%;
     justify-self: end;
+    transition: all .3s ease-in-out;
 }
-.div6 { 
+
+.div5:hover {
+    background-size: 90%;
+}
+
+.div6 {
     color: white;
     grid-area: 3 / 1 / 3 / 3;
     width: 80%;
@@ -654,23 +694,31 @@ color: white;
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
 }
+
+.div6:hover {
+    background-size: 80%;
+}
+
 .div7 {
     color: white;
     background: black;
-    grid-area: 3 / 3 / 3 / 6; 
+    grid-area: 3 / 3 / 3 / 6;
     height: 30rem;
     background-image: url(../media/balance.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
 }
 
-.work-description{
+.work-description {
     position: relative;
     height: 100%;
 }
-.work-description p{
+
+.work-description p {
     position: absolute;
     bottom: 0;
     margin-bottom: -3rem;
@@ -678,74 +726,85 @@ color: white;
     font-size: 0.9rem;
     text-transform: capitalize
 }
-.grid-item:hover{
+
+.grid-item:hover {
     opacity: 0.9;
 }
 
-.grid-item:hover .work-description p{
+.grid-item:hover .work-description p {
     text-decoration: underline;
     transition: opacity .25s;
 }
 
 @media only screen and (min-width : 480px) and (max-width : 700px) {
-    .work-grid{
+    .work-grid {
         margin-top: 20vw;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
         padding: 3vw;
     }
-    .div1{
+
+    .div1 {
         grid-area: 1 / 1 / 1 / 1;
         width: 100%;
         height: 30rem;
     }
-    .div2{
+
+    .div2 {
         grid-area: 2 / 1 / 2 / 2;
     }
-    .div5{
+
+    .div5 {
         grid-area: 3 / 1 / 4 / 2;
         width: 100%;
         height: 30rem;
     }
-    .div4{
+
+    .div4 {
         grid-area: 4 / 1 / 5 / 2;
     }
-    .work-description p{
+
+    .work-description p {
         margin-bottom: -4rem;
         font-size: 1.5rem;
     }
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
-    .work-grid{
+    .work-grid {
         padding: 0rem;
         margin-top: 20vw;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
-    .div1{
+
+    .div1 {
         grid-area: 1 / 1 / 1 / 1;
         width: 100%;
         height: 30rem;
     }
-    .div2{
+
+    .div2 {
         grid-area: 2 / 1 / 2 / 2;
     }
-    .div5{
+
+    .div5 {
         grid-area: 3 / 1 / 4 / 2;
         width: 100%;
         height: 30rem;
     }
-    .div4{
+
+    .div4 {
         grid-area: 4 / 1 / 5 / 2;
     }
-    .work-description p{
+
+    .work-description p {
         margin-bottom: -4rem;
         font-size: 1.5rem;
     }
 }
 
-.contact{
+.contact {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -755,26 +814,69 @@ color: white;
     margin-bottom: 5vw;
 }
 
-.contact-description{
+.contact-description {
     flex: 1 1 40%;
 }
 
-.contact-links{
+.contact-links {
     flex: 2 1 60%;
     text-align: right;
 }
 
-.footer{
-/*  position: fixed;*/
+.footer {
+    /*  position: fixed;*/
     margin-top: 20rem;
     margin-bottom: 10rem;
     text-align: center;
 }
-.hr{
+
+.hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
-    padding: 0;  
+    padding: 0;
+}
+
+/*Project Pages*/
+.banner {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-1px) scale(2);
+}
+
+.bannerWrapper{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.foreground {
+    z-index: 1;
+    position: relative;
+    height: auto;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+/*Evolutionary Design Systems*/
+.evolutionary .banner{
+    background-image: url('../media/balance/mockup.jpg');
+    background-position: 50% 50%;
+}
+
+.evolutionary .forground{
+    background: white;
 }

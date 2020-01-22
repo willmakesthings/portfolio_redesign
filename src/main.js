@@ -55,6 +55,7 @@
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#about").offset().top
         }, 0);
+        return false;
     });
     $(".burger-about").click(function() {
         $([document.documentElement, document.body]).animate({
@@ -64,28 +65,32 @@
         $(".hero-text span").toggle();
         $('#overlay').toggleClass('open');
         $('body').toggleClass('noscroll')
+        return false;
     });
     
     $("#workLink").click(function() {
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#work").offset().top
+            scrollTop: $("#work").offset().top -100
         }, 0);
+        return false;
     });
     $(".burger-work").click(function() {
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#work").offset().top
+            scrollTop: $("#work").offset().top -100
         }, 0);
         
         $("#toggle").toggleClass('active');
         $(".hero-text span").toggle();
         $('#overlay').toggleClass('open');
         $('body').toggleClass('noscroll')
+        return false;
     });
     
     $("#contactLink").click(function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#contact").offset().top
         }, 0);
+        return false;
     });
     $(".burger-contact").click(function() {
         $([document.documentElement, document.body]).animate({
@@ -96,6 +101,7 @@
         $(".hero-text span").toggle();
         $('#overlay').toggleClass('open');
         $('body').toggleClass('noscroll')
+        return false;
     });
     
     //LIGHT MODE SCROLL
