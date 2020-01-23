@@ -105,6 +105,8 @@
     });
     
     //LIGHT MODE SCROLL
+if (top.location.pathname === '/index.html')
+{
     $(function() {
         $(window).scroll(function () {
           if ($(this).scrollTop() > 70) {
@@ -122,6 +124,7 @@
           }
         });
     });
+}
     
     //HAMBURGER TOGGLE
     $('#toggle').click(function() {

@@ -112,10 +112,15 @@ h4 {
 
 p,
 a,
+ul,
 ol {
     font-weight: 400;
-    font-size: 1.9rem;
-    line-height: 3.5rem;
+    font-size: 1.7rem;
+    line-height: 2.9rem;
+}
+
+ol.clean, ul.clean {
+  list-style-type: none;
 }
 
 strong {
@@ -206,6 +211,156 @@ code {
     border-radius: .5rem;
 }
 
+/* Spacing */
+
+.mbxs {
+  margin-bottom: .5rem !important;
+}
+
+.mbs {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb {
+  margin-bottom: 5rem !important;
+}
+
+.mbm {
+  margin-bottom: 8rem !important;
+}
+
+.mbl {
+  margin-bottom: 16rem !important;
+}
+
+.mbxl {
+  margin-bottom: 27rem !important;
+}
+
+.phs {
+  margin: 0 1rem;
+}
+
+.ph {
+  margin: 0 2rem;
+}
+
+.phl {
+  margin: 0 5rem;
+}
+
+article{
+    display: block;
+}
+
+p ~ section {
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+}
+
+.processGrid{
+    height: 100%;
+    margin: 0 auto;
+}
+
+.projectBlock {
+  border: 0;
+  vertical-align: baseline;
+  height: 100%;
+  display: inline-block;
+}
+
+.projectBlock figure:not(:last-child) {
+  border-right: 6px solid transparent;
+}
+
+.projectBlock figure:not(:first-child) {
+  border-left: 6px solid transparent;
+}
+
+.projectBlock figure {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+@media (max-width: 720px){
+  .projectBlock figure {
+    margin-bottom: 6px;
+  }
+}
+
+.full {
+  width: 100%;
+  border: none !important;
+}
+
+.threeQuarter {
+  width: 75%;
+}
+
+.twoThird {
+  width: calc(200% / 3);
+}
+
+.half {
+  width: 50%;
+}
+
+.third {
+  width: calc(100% / 3);
+}
+
+.quarter {
+  width: 25%;
+}
+
+@media (max-width: 640px){
+  .projectBlock figure:not(:last-child) {
+    border-right: none;
+  }
+
+  .projectBlock figure:not(:first-child) {
+    border-left: none;
+  }
+
+  .threeQuarter {
+    width: 100%;
+  }
+
+  .twoThird {
+    width: 100%;
+  }
+
+  .half {
+    width: 100%;
+  }
+
+  .third {
+    width: 100%;
+  }
+
+  .quarter {
+    width: 100%;
+  }
+}
+
+.projectElement img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.projectElement .short {
+  max-height: 200px;
+}
+
+.projectElement .tall {
+  max-height: 620px;
+}
+
+
 /* CURSOR */
 
 #cursor {
@@ -279,7 +434,9 @@ code {
     list-style: none;
     z-index: 999;
     text-decoration: none;
+    line-height: 0rem;
 }
+
 
 .nav-menu-item {
     padding-left: 2.1875vw;
@@ -312,6 +469,7 @@ code {
     display: inline-block;
     line-height: 1.5rem;
     transition: transform .5s cubic-bezier(0, 1.07, .89, .99);
+    font-size: 1rem;
 }
 
 .hover-effect li a:before {
@@ -823,11 +981,20 @@ code {
     text-align: right;
 }
 
+/*Footer*/
+
 .footer {
     /*  position: fixed;*/
     margin-top: 20rem;
     margin-bottom: 10rem;
-    text-align: center;
+}
+
+.footer ul{
+    margin-left: auto;
+}
+
+.footer li{
+    margin-left: 5rem;
 }
 
 .hr {
@@ -840,6 +1007,7 @@ code {
 }
 
 /*Project Pages*/
+
 .banner {
     background-position: center;
     background-size: cover;
@@ -871,12 +1039,31 @@ code {
     width: 100%;
 }
 
+.project-header{
+    margin-top: 12rem;
+    margin-bottom: 9rem;
+}
+
+.caption{
+    text-indent: 0 !important;
+    font-family: Courier, monospace;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: -.03rem;
+    color: rgba(92, 90, 90, 1);
+    transition: color .3s;
+}
+
 /*Evolutionary Design Systems*/
+.evolutionary{
+    background-color: white !important;
+}
+
 .evolutionary .banner{
     background-image: url('../media/balance/mockup.jpg');
     background-position: 50% 50%;
 }
 
-.evolutionary .forground{
-    background: white;
+.evolutionary .foreground{
+    background-color: white;
 }
