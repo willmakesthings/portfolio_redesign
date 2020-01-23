@@ -141,6 +141,10 @@ strong {
     transition: color .3s;
 }
 
+.caption.quote{
+    text-align: right;
+}
+
 a.caption:hover {
     color: rgba(0, 0, 0, 0.9);
 }
@@ -416,16 +420,13 @@ p ~ section {
     justify-content: space-between;
     font-family: 'IBM Plex Mono', Helvetica, sans-serif;
     margin-top: 3.5rem;
-    z-index: 99;
+    z-index: 99999999;
+    mix-blend-mode: exclusion;
 }
 
 .nav-logo {
     font-family: 'IBM Plex Mono', Helvetica, sans-serif;
     color: white;
-}
-
-#luxy {
-    background-color: black;
 }
 
 .nav-menu {
@@ -436,7 +437,6 @@ p ~ section {
     text-decoration: none;
     line-height: 0rem;
 }
-
 
 .nav-menu-item {
     padding-left: 2.1875vw;
@@ -455,6 +455,40 @@ p ~ section {
 .nav-menu-item a:hover {
 
     cursor: none;
+}
+
+.back-arrow{
+    width: 3rem;
+    height: 1rem;
+    transform: scale(1.5);
+    display: block;
+/*    mix-blend-mode: difference;*/
+    transition: ease-in-out 3s;
+
+}
+
+.back-arrow svg{
+    stroke: #fff;
+    fill: none;
+    height: 100%;
+    width: 100%;
+    transition:width 2s ease;
+    overflow: visible;
+}
+
+/*
+.back-arrow svg:hover{
+    transform: scale(1.5);
+}
+*/
+
+#back-line{
+    transform-origin: left;
+    transition: transform 0.2s ease-out;
+}
+
+.back-arrow svg:hover > #back-line{
+    transform: scaleX(1.5);
 }
 
 .hover-effect li {
@@ -681,6 +715,12 @@ p ~ section {
 .hero-arrow-svg {
     height: 8rem;
     fill: white;
+    transform-origin: bottom;
+    transition: transform 0.2s ease;
+}
+
+.hero-arrow-svg:hover{
+    transform: scaleY(1.1);
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -1056,6 +1096,10 @@ p ~ section {
 
 /*Evolutionary Design Systems*/
 .evolutionary{
+    background-color: white !important;
+}
+
+.evolutionary main{
     background-color: white !important;
 }
 

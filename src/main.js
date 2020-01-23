@@ -112,14 +112,14 @@ if (top.location.pathname === '/index.html')
           if ($(this).scrollTop() > 70) {
              $("body, main, .overlay").addClass("lightBG");
              $(".burger_menu-top, .burger_menu-bottom").addClass("darkmode");
-             $(".nav-logo, .nav-menu-item a, .hero-text, .hero-name, .about, .overlay ul li a").addClass("lightText");
+             $(".hero-text, .hero-name, .about, .overlay ul li a").addClass("lightText");
 //              cursor.style.background = "#000";
 
           }
           if ($(this).scrollTop() < 70) {
              $("body, main, .overlay").removeClass("lightBG");
               $(".burger_menu-top, .burger_menu-bottom").removeClass("darkmode");
-             $(".nav-logo, .nav-menu-item a, .hero-text, .hero-name, .about, .overlay ul li a").removeClass("lightText");
+             $(".hero-text, .hero-name, .about, .overlay ul li a").removeClass("lightText");
 //              cursor.style.background = "#fff";
           }
         });
