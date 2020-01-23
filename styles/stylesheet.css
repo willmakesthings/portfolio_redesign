@@ -461,9 +461,9 @@ p ~ section {
     width: 3rem;
     height: 1rem;
     transform: scale(1.5);
-    display: block;
 /*    mix-blend-mode: difference;*/
     transition: ease-in-out 3s;
+    position: relative;
 
 }
 
@@ -843,13 +843,13 @@ p ~ section {
     height: 30rem;
     background-image: url(../media/balance.jpg);
     background-position: center;
-    background-size: 102%;
-    background-repeat: no-repeat;
+    background-size: 130%;
+    background-repeat: repeat;
     transition: all .3s ease-in-out;
 }
 
 .div2:hover {
-    background-size: 100%;
+    background-size: 120%;
 }
 
 .div4 {
