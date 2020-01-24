@@ -85,6 +85,13 @@ body {
     display: flex;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  outline:none !important;
+}
+
 /* TYPOGRAPHY */
 
 
@@ -267,11 +274,19 @@ p ~ section {
     margin: 0 auto;
 }
 
+.screenGrid{
+    height: 50%;
+}
+
 .projectBlock {
   border: 0;
   vertical-align: baseline;
   height: 100%;
   display: inline-block;
+}
+
+.projectBlock .short{
+    height: 600px;
 }
 
 .projectBlock figure:not(:last-child) {
@@ -349,6 +364,14 @@ p ~ section {
   .quarter {
     width: 100%;
   }
+}
+
+.screen{
+    border-radius: 15px;
+/*
+    padding-left: 5rem;
+    padding-right: 5rem;
+*/
 }
 
 .projectElement img {
@@ -1066,8 +1089,6 @@ p ~ section {
     perspective: 1px;
     transform-style: preserve-3d;
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .foreground {
@@ -1104,10 +1125,44 @@ p ~ section {
 }
 
 .evolutionary .banner{
-    background-image: url('../media/balance/mockup.jpg');
-    background-position: 50% 50%;
+    background-color: orangered;
+}
+
+.evolutionary .banner svg{
+    width: 50%;
+}
+
+#patch-animation{
+    stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 5s ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .evolutionary .foreground{
     background-color: white;
 }
+
+/*Balance Project*/
+.balance{
+    background-color: white !important;
+}
+
+.balance main{
+    background-color: white !important;
+}
+
+.balance .banner{
+    background-image: url('../media/balance/mockup.jpg');
+    background-position: 50% 50%;
+}
+
+.balance .foreground{
+    background-color: white;
+}
+
