@@ -105,7 +105,7 @@
     });
     
     //LIGHT MODE SCROLL
-if (top.location.pathname === '/index.html')
+if (top.location.pathname !== '/work/balance.html' || top.location.pathname !== '/work/evolutionary.html')
 {
     $(function() {
         $(window).scroll(function () {
