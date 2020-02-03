@@ -24,6 +24,19 @@
         }
     }
 
+    //Favorites random links
+    var sites = [
+              "https://open.spotify.com/playlist/1iAB3G7w8iO5QWHh1S8kK8",
+              "https://www.youtube.com/watch?v=5IsSpAOD6K8",
+              "https://www.youtube.com/watch?v=EWEl8-PHhMI",
+                "https://www.amazon.com/Dune-Frank-Herbert/dp/0441172717"]
+
+           function randomSite() {
+        var i = parseInt(Math.random() * sites.length);
+//        location.href = sites[i];
+               window.open(sites[i]);
+    }
+
     //HEADER TEXT
     $("#js-rotating").Morphext({
         animation: "moveTextUp",
@@ -34,6 +47,7 @@
     });
     
     //CURSOR
+
     var cursor = document.getElementById('cursor');
     window.addEventListener('mousemove' , function(e){
         var x = e.clientX;
@@ -105,8 +119,8 @@
     });
     
     //LIGHT MODE SCROLL
-if (top.location.pathname !== '/work/balance.html' || top.location.pathname !== '/work/evolutionary.html')
-{
+//if (top.location.pathname !== '/work/balance.html' || top.location.pathname !== '/work/evolutionary.html')
+//{
     $(function() {
         $(window).scroll(function () {
           if ($(this).scrollTop() > 70) {
@@ -124,7 +138,7 @@ if (top.location.pathname !== '/work/balance.html' || top.location.pathname !== 
           }
         });
     });
-}
+//}
     
     //HAMBURGER TOGGLE
     $('#toggle').click(function() {

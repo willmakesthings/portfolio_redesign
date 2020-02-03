@@ -410,14 +410,16 @@ p ~ section {
     height: 50px !important;
 }
 
+.hide {
+    display: none;
+}
+
 @media (hover:hover) {
 
     #cursor,
     .zoom {
         display: block;
     }
-
-
 }
 
 
@@ -551,6 +553,10 @@ p ~ section {
     .nav-menu {
         display: none;
     }
+    
+    .nav{
+        mix-blend-mode: normal;
+    }
 
 }
 
@@ -563,6 +569,7 @@ p ~ section {
     z-index: 100;
     transition: opacity .25s ease;
     background: none;
+
 }
 
 .burger_menu:hover {
@@ -880,15 +887,15 @@ p ~ section {
     grid-area: 2 / 1 / 2 / 3;
     background: #1f1f1f;
     height: 30rem;
-    background-image: url(../media/plotter-optim.jpg);
+    background-image: url(../media/animation/creation-of-adam.jpg);
     background-position: center;
-    background-size: 50%;
+    background-size: 120%;
     background-repeat: no-repeat;
     transition: all .3s ease-in-out;
 }
 
 .div4:hover {
-    background-size: 48%;
+    background-size: 110%;
 }
 
 .div5 {
@@ -1115,6 +1122,22 @@ p ~ section {
     transition: color .3s;
 }
 
+.videoWrapper {
+    position: relative;
+    padding-bottom: 55%;
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+
 /*Evolutionary Design Systems*/
 .evolutionary{
     background-color: white !important;
@@ -1166,3 +1189,20 @@ p ~ section {
     background-color: white;
 }
 
+/*Animation projects*/
+.animation{
+    background-color: black !important;
+    color: white;
+    cursor:auto;
+}
+
+.animation a{
+    cursor: pointer;
+}
+.animation .foreground{
+    background-color: black;
+}
+.animation .banner{
+    background-image: url('../media/animation/creation-of-adam.jpg');
+    background-position: 50% 50%;
+}
