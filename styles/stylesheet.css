@@ -818,11 +818,14 @@ p ~ section {
     .about {
         flex-direction: column;
         padding: 1rem;
+        margin-top: 5rem;
     }
 
     .about .links {
         padding-left: 0px;
         text-align: right;
+        margin-left: 0;
+        margin-top: 25px;
     }
 
     .about .links-list {
@@ -1096,6 +1099,10 @@ p ~ section {
     perspective: 1px;
     transform-style: preserve-3d;
     height: 100vh;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .foreground {
