@@ -1213,3 +1213,26 @@ p ~ section {
     background-image: url('../media/animation/creation-of-adam.jpg');
     background-position: 50% 50%;
 }
+
+/*Interactive III Project*/
+.interactive{
+    background-color: white !important;
+    cursor: auto;
+}
+
+.interactive a{
+    cursor: pointer;
+}
+
+.interactive main{
+    background-color: white !important;
+}
+
+.interactive .banner{
+    background-image: url('../media/interactive/button.gif');
+    background-position: 50% 50%;
+}
+
+.interactive .foreground{
+    background-color: white;
+}
